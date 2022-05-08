@@ -696,6 +696,7 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
     background-color: rgba(0, 0, 0, 0.2);
     top: 0;
     transition: opacity 250ms, visibility 250ms;
+    transition: var(--transition-timing-function) ;
 }
 .backdrop.is-hidden .modal{
     transform: scale(0.5) rotate(180deg);
@@ -725,19 +726,27 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: var(--transition-duration) var(--transition-timing-function);
 }
 .modal-icon {
     fill: #000000;
+    transition: var(--transition-duration) var(--transition-timing-function);
 }
-.modal-close-btn:hover .modal-icon {
-    fill: var(--accent-color);
-    transition: var(--transition-duration);
+.modal-close-btn:hover, .modal-close-btn:focus,
+{
+fill: var(--accent-color);
+}
 
-}
+
 .modal-icon:hover, .modal-icon:focus {
     fill: var(--accent-color);
-    transition: var(--transition-duration);
-
+     
+}
+.modal-close-btn:hover .modal-icon {
+        fill: var(--accent-color);
+    }
+.modal-close-btn:focus .modal-icon {
+    fill: var(--accent-color);
 }
 .modal-field {
     margin-bottom: 10px;
@@ -772,13 +781,13 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
+    transition: var(--transition-duration) var(--transition-timing-function);
 
     
 }
 .modal-input:focus + .modal-icon-contacts {
     fill: var(--accent-color);
-    transition: var(--transition-duration);
-}
+ }
 
 .modal-input {
     width: 100%;
@@ -788,10 +797,11 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
     outline: none;
     padding-left: 35px;
     fill: #ffffff;
+    transition: var(--transition-duration) var(--transition-timing-function);
 }
 .modal-input:focus {
     border-color: var(--accent-color);
-    transition: border var(--transition-duration);
+    
 }
 
 .modal-area {
@@ -803,6 +813,7 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
     resize: none;
     padding: 12px 16px;
     margin-bottom: 20px;
+    transition: border var(--transition-duration) var(--transition-timing-function);
     
 }
 .modal-area::placeholder {
@@ -810,7 +821,7 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
 }
 .modal-area:focus {
     border-color: var(--accent-color);
-    transition: border var(--transition-duration);
+    
 }
 .modal-field-checkbox {
     display: flex;
@@ -834,7 +845,7 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
     border: 2px solid rgba(33, 33, 33, 1);
     border-radius: 3px;
     margin-right: 8px;
-    transition: border var(--transition-duration);
+    transition: border var(--transition-duration) var(--transition-timing-function);
 }
 
 
@@ -845,7 +856,7 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
     background-repeat: no-repeat;
     background-position: center;
     background-origin: border-box;
-    transition: background-color var(--transition-duration);
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
     
 }
 
