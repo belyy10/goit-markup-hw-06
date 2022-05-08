@@ -695,8 +695,8 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     top: 0;
-    transition: opacity 250ms, visibility 250ms;
-    transition: var(--transition-timing-function) ;
+    transition: background-color var(--transition-timing-function) opacity 250ms, visibility 250ms;
+    
 }
 .backdrop.is-hidden .modal{
     transform: scale(0.5) rotate(180deg);
@@ -726,11 +726,11 @@ transition: transform var(--transition-duration) var(--transition-timing-functio
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: var(--transition-duration) var(--transition-timing-function);
+    transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 .modal-icon {
     fill: #000000;
-    transition: var(--transition-duration) var(--transition-timing-function);
+    transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 .modal-close-btn:hover, .modal-close-btn:focus,
 {
