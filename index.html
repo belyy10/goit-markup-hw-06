@@ -283,16 +283,17 @@
         name="email"
         placeholder="E-mail"
         class="footer-input"
+        required
         >
         <label for="user-email" class="footer-label"></label>
+            <button type="submit" class="footer-telegram btn">Подписаться<svg class="telegram" width="24" height="24">
+                    <use href="./images/icons.svg#icon-icon-sendtelegram-2">
+                    </use>
+                </svg>
+                </a>
+            </button>
         </div>
     </form>
-    <button type="button" class="footer-telegram btn"><a href="" class="footer-telegram-link">Подписаться<svg class="telegram" width="24" height="24">
-            <use href="./images/icons.svg#icon-icon-sendtelegram-2">
-            </use>
-        </svg>
-    </a>    
-    </button>
     </div>
     </div>
 </footer>
@@ -320,7 +321,8 @@
                 type="tel" 
                 class="modal-input" 
                 name="user-tel" 
-                id="user-tel">
+                id="user-tel"
+                required>
                 <svg class="modal-icon-contacts" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone-black-18dp-1-1"></use>
                 </svg>
@@ -332,7 +334,8 @@
                 <input type="email" 
                 class="modal-input" 
                 name="user-mail" 
-                id="user-mail">
+                id="user-mail"
+                required>
                 <svg class="modal-icon-contacts" width="18" height="18">
                 <use href="./images/icons.svg#icon-email-black-18dp-1-1"></use>
                 </svg>
